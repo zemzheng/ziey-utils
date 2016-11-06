@@ -1,1 +1,1 @@
-babel src -d dist
+babel src --out-dir dist --ignore **/__test__/*.js

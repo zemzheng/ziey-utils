@@ -1,10 +1,21 @@
-export default function( content, { openTag = '{%', closeTag = '%}', adjust = x => x } = {} ){
+function inputAdjustDefault( str ){
+    return str.trim();
+}
+
+function outputAdjustDefault( str ){
+    return str;
+}
+
+export default function( content, { openTag = '{%', closeTag = '%}', inputAdjust = inputAdjustDefault, outputAdjust = outputAdjustDefault } = {} ){
 
     let result     = [],
         map        = {};
 
     ( content + '' ).split( openTag ).forEach( function( one, index ){
-        if( !index ) return; // ignore first one
+        if( !index ){
+            result.push( one );
+            return; // ignore first one
+        }
 
         let rightList = one.split( closeTag );
         if( 2 != rightList.length ){
@@ -14,13 +25,15 @@ export default function( content, { openTag = '{%', closeTag = '%}', adjust = x 
             throw err;
         }
 
-        let from = rightList.shift(),
-            to   = adjust( from );
+        let from = inputAdjust( rightList.shift() ),
+            to   = outputAdjust( from );
         result.push( to );
         map[ index ] = { from, to }
 
-        result = result.concat( rightList.filter( x => x ) );
+        result = result.concat( rightList );
     } );
+
+    result = result.filter( x => x );
 
     return { result, map };
 }
