@@ -1,0 +1,27 @@
+{
+  "name": "ziey-utils",
+  "version": "1.0.0",
+  "description": "some tools",
+  "main": "dist/index.js",
+  "scripts": {
+    "build" : "sh build.sh",
+    "test"  : "sh test.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zemzheng/ziey-utils.git"
+  },
+  "keywords": [
+    "ziey",
+    "tools"
+  ],
+  "author": "zemzheng@gmail.com",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/zemzheng/ziey-utils/issues"
+  },
+  "homepage": "https://github.com/zemzheng/ziey-utils#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0"
+  }
+}
