@@ -1,5 +1,7 @@
 # ziey-utils
 
+[![Build Status](https://travis-ci.org/zemzheng/ziey-utils.svg)](https://travis-ci.org/zemzheng/ziey-utils)
+
 ## Description
 
 工具汇总
