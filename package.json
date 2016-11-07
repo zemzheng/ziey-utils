@@ -1,6 +1,6 @@
 {
   "name": "ziey-utils",
-  "version": "1.0.0",
+  "version": "0.5.0",
   "description": "some tools",
   "main": "dist/index.js",
   "scripts": {
