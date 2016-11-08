@@ -1,8 +1,12 @@
 
 var assert = require('assert');
 import pick from "..";
+import { pick as pickAlias } from "../..";
 
 describe( __filename, function() {
+    it('pick alias', function(){
+        assert.equal( pick, pickAlias );
+    } );
     it('pick hello world', function() {
         assert.equal( 
             pick( '{% hello world %}' ).result.join(''),

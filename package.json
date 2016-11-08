@@ -1,11 +1,11 @@
 {
   "name": "ziey-utils",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "some tools",
   "main": "dist/index.js",
   "scripts": {
-    "build": "sh build.sh",
-    "test": "sh test.sh"
+    "build": "./node_modules/.bin/babel src --out-dir dist --ignore **/__test__/*.js",
+    "test": "./node_modules/.bin/mocha --compilers js:babel-register ./src/**/__test__/*.js"
   },
   "repository": {
     "type": "git",
