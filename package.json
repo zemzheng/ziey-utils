@@ -1,30 +1,38 @@
 {
-  "name": "ziey-utils",
-  "version": "0.5.1",
-  "description": "some tools",
-  "main": "dist/index.js",
-  "scripts": {
-    "build": "./node_modules/.bin/babel src --out-dir dist --ignore **/__test__/*.js",
-    "test": "./node_modules/.bin/mocha --compilers js:babel-register ./src/**/__test__/*.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zemzheng/ziey-utils.git"
-  },
-  "keywords": [
-    "ziey",
-    "tools"
-  ],
-  "author": "zemzheng@gmail.com",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/zemzheng/ziey-utils/issues"
-  },
-  "homepage": "https://github.com/zemzheng/ziey-utils#readme",
-  "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-register": "^6.18.0",
-    "mocha": "^3.1.2"
-  }
+    "name": "ziey-utils",
+    "version": "0.5.2",
+    "description": "some tools",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "./node_modules/.bin/babel src --out-dir dist --ignore **/__test__/*.js",
+        "prepublish": "./node_modules/.bin/babel src --out-dir dist --ignore **/__test__/*.js",
+        "test": "./node_modules/.bin/mocha --compilers js:babel-register ./src/**/__test__/*.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/zemzheng/ziey-utils.git"
+    },
+    "keywords": [
+        "ziey",
+        "tools"
+    ],
+    "author": "zemzheng@gmail.com",
+    "license": "Apache-2.0",
+    "bin": {
+        "ziey-up-readme": "./dist/npm_readme_updater/index.js"
+    },
+    "bugs": {
+        "url": "https://github.com/zemzheng/ziey-utils/issues"
+    },
+    "homepage": "https://github.com/zemzheng/ziey-utils#readme",
+    "devDependencies": {
+        "babel-cli": "^6.18.0",
+        "babel-preset-es2015": "^6.18.0",
+        "babel-register": "^6.18.0",
+        "mocha": "^3.1.2"
+    },
+    "dependencies": {
+        "prompt": "^1.0.0"
+    },
+    "readme": "# ziey-utils\n\n[![Build Status](https://travis-ci.org/zemzheng/ziey-utils.svg)](https://travis-ci.org/zemzheng/ziey-utils)\n\n## Description\n\n工具汇总\n\n## Install\n\nnpm i ziey-utils\n\n## Usage\n\n```javascript\nimport xxxx from \"ziey-utils/pick\";\n// or import { xxxx } from \"ziey-utils\";\n// xxxx 为要使用的模块\n```\n\n## List\n\n* [pick](src/pick) 提取文本中的特定内容\n"
 }
