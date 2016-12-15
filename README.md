@@ -2,6 +2,10 @@
 
 [![Build Status](https://travis-ci.org/zemzheng/ziey-utils.svg)](https://travis-ci.org/zemzheng/ziey-utils)
 
+[![NPM version](https://img.shields.io/npm/v/ziey-utils.svg)](https://nodei.co/npm/ziey-utils)
+
+[![NPM](https://nodei.co/npm/ziey-utils.png)](https://nodei.co/npm/ziey-utils/)
+
 ## Description
 
 工具汇总
