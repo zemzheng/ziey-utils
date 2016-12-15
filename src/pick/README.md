@@ -16,9 +16,31 @@ import pick from "ziey-utils/pick";
 pick( '{% hello world %}' ) /* ==>
     result : [ 'hello world' ],
     map : {
-        "1" : { from : "hello world", to : "hello world" }
+        "0" : { from : "hello world", to : "hello world" }
     }
 */
+
+// ignore range
+//         | {% hello world %} {-ignore area-} {% hello world2 %} {% hello world3 %}
+// area    | ------------------               --------------------------------------
+//  .index |         0                                 1
+// range   | -----------------                 ------------------ ------------------
+//  .index |         0                                 0                  1
+// sum     |      map.0.0                          map.1.0            map.1.1
+//
+pick( '{% hello world %} {-ignore area-} {% hello world2 %} {% hello world3 %}', { ignoreStart : '{-', ignoreEnd : '-}' } ) /* ==>
+    result : [ 'hello world ', 'ignore area', ' hello world2 hello world3' ],
+    map : {
+        "0" : {
+            "0" : { from : "hello world", to : "hello world" },
+        },
+        "1" : {
+            "0" : { from : "hello world2", to : "hello world2" },
+            "1" : { from : "hello world3", to : "hello world3" },
+        },
+    }
+*/
+
 
 // custom tag
 pick( '{[ hello world #}', { openTag : '{[', closeTag : '#}' } );
@@ -28,7 +50,7 @@ pick( '{% hello world %}', { outputAdjust : x => `we say : ${x}` } );
 /* ==> {
     result : [ 'we say : hello world' ],
     map : {
-        "1" : { from : "hello world", to : "we say : hello world" }
+        "0" : { from : "hello world", to : "we say : hello world" }
     }
 }
 */

@@ -13,7 +13,7 @@ npm i ziey-utils
 ## Usage
 
 ```javascript
-import xxxx from "ziey-utils/pick";
+import xxxx from "ziey-utils/xxxx";
 // or import { xxxx } from "ziey-utils";
 // xxxx 为要使用的模块
 ```
@@ -21,3 +21,5 @@ import xxxx from "ziey-utils/pick";
 ## List
 
 * [pick](src/pick) 提取文本中的特定内容
+* [data2id](src/data2id) 将数据转为 hash 值，用以比较或者做 key
+* [npm_readme_updater](src/npm_readme_updater) npm readme 更新工具

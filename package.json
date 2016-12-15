@@ -1,6 +1,6 @@
 {
     "name": "ziey-utils",
-    "version": "0.5.3",
+    "version": "0.5.4",
     "description": "some tools",
     "main": "dist/index.js",
     "scripts": {
@@ -19,7 +19,7 @@
     "author": "zemzheng@gmail.com",
     "license": "Apache-2.0",
     "bin": {
-        "ziey-up-readme": "./dist/npm_readme_updater/index.js"
+        "ziey_readme_up": "./dist/npm_readme_updater/index.js"
     },
     "bugs": {
         "url": "https://github.com/zemzheng/ziey-utils/issues"
@@ -34,5 +34,5 @@
     "dependencies": {
         "prompt": "^1.0.0"
     },
-    "readme": "# ziey-utils\n\n[![Build Status](https://travis-ci.org/zemzheng/ziey-utils.svg)](https://travis-ci.org/zemzheng/ziey-utils)\n\n## Description\n\n工具汇总\n\n## Install\n\nnpm i ziey-utils\n\n## Usage\n\n```javascript\nimport xxxx from \"ziey-utils/pick\";\n// or import { xxxx } from \"ziey-utils\";\n// xxxx 为要使用的模块\n```\n\n## List\n\n* [pick](src/pick) 提取文本中的特定内容\n"
+    "readme": "# ziey-utils\n\n[![Build Status](https://travis-ci.org/zemzheng/ziey-utils.svg)](https://travis-ci.org/zemzheng/ziey-utils)\n\n## Description\n\n工具汇总\n\n## Install\n\nnpm i ziey-utils\n\n## Usage\n\n```javascript\nimport xxxx from \"ziey-utils/xxxx\";\n// or import { xxxx } from \"ziey-utils\";\n// xxxx 为要使用的模块\n```\n\n## List\n\n* [pick](src/pick) 提取文本中的特定内容\n* [data2id](src/data2id) 将数据转为 hash 值，用以比较或者做 key\n* [npm_readme_updater](src/npm_readme_updater) npm readme 更新工具\n"
 }
